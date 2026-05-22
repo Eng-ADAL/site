@@ -1,2 +1,2 @@
-# logicand.space
-WebPage
+# adal.page
+This WebSite currently under construction 🚧
