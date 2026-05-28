@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> ADAL | Transforming Data</title>
+  <title> A.DAL | Data Access Layer </title>
   <link rel="stylesheet" href="style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="images/home/logo.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/home/logo.png">
+
   <style>
-
-
     /* --- Header --- */
     header {
       position: relative;
       text-align: center;
       color: white;
+      padding: 40px 20px;
     }
 
     .header-img {
@@ -31,74 +31,6 @@
       transform: translate(-50%, -50%);
     }
 
-    /* --- Hero Flip Card --- */
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #111;
-      color: white;
-    }
-
-    .flip-card {
-      width: 400px;
-      height: 300px;
-      margin: 100px auto;
-      perspective: 1000px;
-    }
-
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-    }
-
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-
-    .flip-card-front,
-    .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-      backface-visibility: hidden;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 10px;
-      color: #00b7ff;
-      font-size: 1.5em;
-      text-shadow: 5px 5px 8px black;
-    }
-
-    /* Front side with 2 layered images */
-    .flip-card-front {
-      background-image: 
-        url('images/home/logicand_space2.png'),
-        url('images/home/logicand_space.png');
-      background-size: cover, cover;
-      background-position: center, center;
-    }
-
-    /* Back side with 2 layered images */
-    .flip-card-back {
-      background-image: 
-        url('images/home/logicand_space.png'),
-        url('images/home/logicand_space2.png');
-      background-size: cover, cover;
-      background-position: center, center;
-      transform: rotateY(180deg);
-    }
-
-    .flip-card span {
-      position: relative;
-      z-index: 1;
-    }
 
     /* --- Footer Img Section --- */
 .footer-image-strip {
@@ -141,46 +73,27 @@ footer {
 <body>
 
  <!-- Header Section -->
+<div class="footer-image-container">
+</div>
   <header>
-    <img src="images/home/header.png" alt="Data header" class="header-img">
-    <h1>We are moving to <a href="https://adal.page" target="_blank">adal.page</a></h1>
+    <h1>Welcome to <a href="https://adal.page" target="_blank">adal.page</a></h1>
   </header>
+</body>
+</html>
 
  <!-- About Section -->
   <section class="about">
     <h2>About</h2>
-    <p>
-      Hi I am A. DAL
-     </p>
-
-
-    <p>
-    Here you’ll find my projects, notes, and experiments in data and tech. It’s a place for learning, creating, and connecting ideas.
-    </p>
-
+    <p>Hi I am A. DAL</p>
+    <p>Here you’ll find my projects, notes, and experiments in data and tech. It’s a place for learning, creating, and connecting ideas.</p>
     <br>
-
-    <p>
-    Skilled in: Engineering · Coding · Computing · Cloud Systems · AI
-    </p>
-
+    <p>Skilled in: Engineering · Coding · Computing · Cloud Systems · AI</p>
     <br>
-
-    <p> Be kind; life is a very short journey..</p>
+    <p>Be kind; life is a very short journey..</p>
 
   </section>
 
- <!-- Hero Section -->
-  <div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <span> </span>
-      </div>
-      <div class="flip-card-back">
-        <span>ADAL</span>
-      </div>
-    </div>
-  </div>
+<!-- Hero Section -->
 
 <!-- Publications Section -->
   <section class="publications">
@@ -241,17 +154,16 @@ footer {
     <h2>Contact</h2>
     <p>
       <a href="https://github.com/eng-adal"         target="_blank">GitHub</a> | 
-      <a href="https://www.linkedin.com/in/engadal" target="_blank">LinkedIn</a> 
+      <a href="https://www.linkedin.com/in/engadal" target="_blank">LinkedIn</a> | 
+      <a href="https://medium.com/@Eng-ADAL"        target="_blank">Medium</a>
     </p>
   </section>
 
 <!-- Decorative Footer Image -->
 <div class="footer-image-container">
-  <img src="images/home/footer.png" alt="Footer decoration" class="footer-img">
 </div>
   <footer>
-    <p>© 2026 logicand.space | ADAL </p>
+    <p>© 2026 adal.page | ADAL </p>
   </footer>
 </body>
 </html>
-
