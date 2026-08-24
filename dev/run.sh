@@ -2,6 +2,7 @@
 set -euo pipefail
 
 REPO_URL="https://github.com/Eng-ADAL/experimental_linux.git"
+BRANCH="refactor/installer"
 WORKDIR="${WORKDIR:-/opt/eng-workstation}"
 LOG_DIR="/var/log/eng-workstation"
 LOG_FILE="$LOG_DIR/eng-workstation.log"
@@ -46,7 +47,7 @@ main() {
         rm -rf --one-file-system "$WORKDIR"
     fi
 
-    git clone --depth 1 "$REPO_URL" "$WORKDIR"
+    git clone --depth 1 --branch "$BRANCH" "$REPO_URL" "$WORKDIR"
 
     cd "$WORKDIR"
 
