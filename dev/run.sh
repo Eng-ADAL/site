@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REPO_URL="https://github.com/Eng-ADAL/experimental_linux.git"
-BRANCH="refactor/installer"
+BRANCH="main"
 WORKDIR="${WORKDIR:-/opt/eng-workstation}"
 LOG_DIR="/var/log/eng-workstation"
 LOG_FILE="$LOG_DIR/eng-workstation.log"
