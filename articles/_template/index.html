@@ -4,11 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Article Template -->
+    <!-- Page-specific metadata -->
     <title>Article Title | A.DAL</title>
 
     <meta
         name="description"
         content="Short description of the article."
+    >
+
+    <meta
+        name="author"
+        content="A.DAL"
+    >
+
+    <link
+        rel="canonical"
+        href="https://adal.page/articles/<article-slug>/"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Article Title"
+    >
+
+    <meta
+        property="og:description"
+        content="Short description of the article."
+    >
+
+    <meta
+        property="og:type"
+        content="article"
+    >
+
+    <meta
+        property="og:url"
+        content="https://adal.page/articles/<article-slug>/"
+    >
+
+    <meta
+        property="og:image"
+        content="https://adal.page/images/articles/<article-slug>/img-<article-slug>-001.webp"
+    >
+
+    <meta
+        property="article:published_time"
+        content="YYYY-MM-DD"
+    >
+
+    <meta
+        property="article:author"
+        content="A.DAL"
+    >
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
     >
 
     <link rel="stylesheet" href="../../style.css">
@@ -20,7 +73,9 @@
         <nav>
             <a href="../../index.html">Home</a>
             <a href="../index.html">Articles</a>
+            <!--
             <a href="../../projects/index.html">Projects</a>
+            -->
         </nav>
     </header>
 
@@ -28,42 +83,150 @@
 
         <article>
 
+            <!-- Article header -->
             <header class="article-header">
 
-                <p class="article-date">1 September 2026</p>
+                <p class="article-date">
+                    <time datetime="YYYY-MM-DD">
+                        DD Month YYYY
+                    </time>
+                </p>
 
                 <h1>Article Title</h1>
 
-                <p class="article-description">
-                    A short summary or subtitle for the article.
-                </p>
-
             </header>
 
-            <figure class="article-hero">
+
+            <!-- Optional main / cover image -->
+            <figure class="article-cover">
+
                 <img
-                    src="../../images/articles/article-slug/hero.png"
-                    alt="Description of the article image"
+                    src="images/articles/img-wsl-for-data-engineers-001.webp/"
+                    alt="Describe the image"
                 >
+
+                <!--
+                Optional caption:
+
+                <figcaption>
+                    Description or context for the image.
+                </figcaption>
+                -->
+
             </figure>
 
+
+            <!-- Flexible article content -->
             <div class="article-content">
 
                 <p>
-                    Article introduction goes here.
+                    Your article starts here.
                 </p>
 
-                <h2>First Section</h2>
+
+                <h2>Section heading</h2>
 
                 <p>
-                    Article content goes here.
+                    Normal article text goes here.
                 </p>
 
-                <h2>Second Section</h2>
+
+                <!-- Content image -->
+                <figure class="article-image">
+
+                    <img
+                        src="../../images/articles/<article-slug>/img-<article-slug>-002.webp"
+                        alt="Describe the image"
+                    >
+
+                    <!--
+                    Optional caption:
+
+                    <figcaption>
+                        Screenshot showing ...
+                    </figcaption>
+                    -->
+
+                </figure>
+
 
                 <p>
-                    More content goes here.
+                    Text can appear immediately before or after an image.
                 </p>
+
+
+                <!-- Unordered list -->
+                <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ul>
+
+
+                <!-- Ordered list -->
+                <ol>
+                    <li>First step</li>
+                    <li>Second step</li>
+                    <li>Third step</li>
+                </ol>
+
+
+                <!-- Inline code -->
+                <p>
+                    Run <code>wget</code> from the terminal.
+                </p>
+
+
+                <!-- Code block -->
+                <pre><code>your-command-here</code></pre>
+
+
+                <h2>Another section</h2>
+
+                <p>
+                    More article content.
+                </p>
+
+
+                <!-- Annotation / note -->
+                <aside class="article-note">
+
+                    <p>
+                        This is an additional note related to the article.
+                    </p>
+
+                </aside>
+
+
+                <!-- Another content image -->
+                <figure class="article-image">
+
+                    <img
+                        src="../../images/articles/<article-slug>/img-<article-slug>-003.webp"
+                        alt="Describe the image"
+                    >
+
+                </figure>
+
+
+                <!-- Link -->
+                <p>
+                    Read the
+                    <a href="https://example.com">
+                        related documentation
+                    </a>.
+                </p>
+
+
+                <!-- Optional blockquote -->
+                <blockquote>
+
+                    <p>
+                        Quoted text goes here.
+                    </p>
+
+                </blockquote>
+
 
                 <h2>Conclusion</h2>
 
@@ -73,11 +236,9 @@
 
             </div>
 
-            <footer class="article-footer">
 
-                <p>
-                    Published: 1 September 2026
-                </p>
+            <!-- Article footer -->
+            <footer class="article-footer">
 
                 <p>
                     <a href="../index.html">← Back to articles</a>
@@ -91,4 +252,3 @@
 
 </body>
 </html>
-
