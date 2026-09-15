@@ -1,181 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta 
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
         name="description"
-        content="Software System and Engineering site for some of amusing cool projects."/>
-  <meta content="adal.page" type="og:title" />
-  <meta property="og:type" content="website" />
-<!--  
-  <meta
-          content="add image link"
-          property="og:image" /> 
--->
-  <meta property="og:url" content="https://www.adal.page" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> A.DAL | A Data Access Layer </title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/home/logo.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="images/home/logo.png">
+        content="Software systems and engineering projects, articles, notes, and experiments."
+    >
 
-  <style>
-    /* --- Header --- */
-    header {
-      position: relative;
-      text-align: center;
-      color: white;
-      padding: 40px 20px;
-    }
+    <meta
+        name="author"
+        content="<ME>"
+    >
 
-    .header-img {
-      width: 100%;
-      height: 100px;
-      object-fit: cover; 
-      filter: brightness(70%);
-    }
+    <title><ME> | A Data Access Layer</title>
 
-    header h1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    <link rel="canonical" href="https://www.<page_url>/">
 
+    <meta property="og:title" content="<ME> | A Data Access Layer">
+    <meta
+        property="og:description"
+        content="Software systems and engineering projects, articles, notes, and experiments."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.<page_url>/">
 
-    /* --- Footer Img Section --- */
-.footer-image-strip {
-  width: 100%;
-  height: 20px; 
-  background-image: url('images/home/footer-blend.png');
-  background-repeat: repeat-x; 
-  background-position: top center;
-  background-size: auto;
-  margin-bottom: -10px;
-}
+    <link rel="stylesheet" href="/style.css">
 
-footer {
-  text-align: center;
-  padding: 40px 20px;
-}
+    <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/images/home/logo.png"
+    >
 
-
-    /* --- Sections --- */
-    section {
-      text-align: center;
-      padding: 40px 20px;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-
-    a {
-      color: #00b7ff;
-      text-decoration: none;
-    }
-  </style>
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="/images/home/logo.png"
+    >
 </head>
+
 <body>
 
- <!-- Header Section -->
-<div class="footer-image-container">
-</div>
-  <header>
-    <h1>Welcome to <a href="https://adal.page" target="_blank">adal.page</a></h1>
-  </header>
-</body>
-</html>
+<header class="site-header">
 
- <!-- About Section -->
-  <section class="about">
-    <h2>About</h2>
-        <p>Hi I am A. DAL</p>
-        <p>Here you’ll find my projects, notes, and experiments in data and tech. It’s a place for learning, creating, and connecting ideas.</p>
-    <br>
-        <p>Skilled in: Engineering · Coding · Computing · Cloud Systems · AI</p>
-    <br>
-        <p>Be kind; life is a very short journey..</p>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#contact">Contact</a>
+    </nav>
 
-  </section>
+    <div class="footer-image-container"></div>
 
-<!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
 
-<!-- Publications Section -->
-  <section class="publications">
-    <h2>Journal:</h2>
+        <p class="hero-kicker">
+            Engineering · Systems · Data · AI
+        </p>
 
-    <p>You can explore my latest entries and musings over on <a href="https://medium.com/@Eng-ADAL" target="_blank">Medium</a></p><br>
+        <h1 id="hero-title">
+            observe · find · build
+            <br>
+            repeat · automate
+            <br>
+            publish for everyone!
+        </h1>
 
-    <ul style="text-align: left;">
+        <p class="hero-intro">
+            I'm <ME>, an engineer exploring software systems,
+            data, cloud, Linux, and AI through projects,
+            experiments, and practical engineering.
+        </p>
 
-      <li><a href="https://medium.com/p/516fdc1ebb27" target="_blank">No one told you that you need that trash bin! But you need it!</a></li><br>
+    </section>
 
-      <li><a href="https://medium.com/p/f9e0d0c958e0" target="_blank">If it works on your Computer, auto activate your VENV.</a></li><br>
+</header>
 
-      <li><a href="https://medium.com/p/9bd2fde19c2f" target="_blank">Let’s resurrect your coding cockpit! tmux-resurrect to the rescue</a></li><br>
 
-      <li><a href="https://medium.com/p/401f9fbb7134" target="_blank">If you’re not using these plugins, you’re wasting your time!</a></li><br>
+<main>
 
-      <li><a href="https://medium.com/p/e1faeaa4e6a4" target="_blank">Still blaming Docker for eating your RAM? 🐳 Build this setup!</a></li><br>
+    <!-- About -->
 
-      <li><a href="https://medium.com/p/95b0547923dd" target="_blank">You Should Never Say “It Works on My PC” Here’s Why;</a></li><br>
+    <section class="about" id="about">
 
-      <li><a href="https://medium.com/p/9b82db504b43" target="_blank">How I Got Verified in 15 Minutes 💎</a></li><br>
+        <h2>About</h2>
 
-      <li><a href="https://medium.com/p/f7192126e5ae" target="_blank">Be a Linux Renegade! Run Linux on VS Code ⚡🐧 (Easy Git! — Easy Switch!)</a></li><br>
+        <p>
+            Hi, I am <ME>.
+        </p>
 
-      <li><a href="https://medium.com/p/fb26d8753b27" target="_blank">The Easiest & Most Secure Git–GitHub SSH Setup (Works on Win/Linux/macOS)</a></li><br>
+        <p>
+            “I have come here to chew bubblegum and build some cool engineering projects, and I’m all out of bubblegum”
+        </p>
 
-      <li><a href="https://medium.com/p/71ce3d43ed4b" target="_blank">Levelling Up Your Terminal: tmux Basics</a></li><br>
+        <p>
+            Skilled in: Engineering · Coding · Computing · Cloud Systems · AI
+        </p>
 
-      <li><a href="https://medium.com/p/fd722369b70d" target="_blank">Survive Your First Day in Vim: Tiny .vimrc + Built-In Cheat Sheet</a></li><br>
+        <p>
+            Here you’ll find my projects, articles, notes, and
+            experiments in data and tech. It’s a place for learning,
+            creating, and connecting ideas.
+        </p>
 
-      <li><a href="https://medium.com/p/f4007fffac69" target="_blank">Level Up Your Terminal: Oh-My-Zsh!</a></li><br>
+    </section>
 
-      <li><a href="https://medium.com/p/9d4fec52e336" target="_blank">Linux 101: Getting Comfortable with the Basics</a></li><br>
 
-      <li><a href="https://medium.com/p/8c2279def99"  target="_blank">Why Data Engineers Use WSL</a></li><br>
+    <!-- Articles -->
 
-    </ul>
-  </section>
+    <section class="articles" id="articles">
 
-  <!-- Projects Section -->
-  <section class="projects">
-    <h2>Projects</h2>
-   <h3>(More Coming Soon)</h3>
-    <p>Here’s a small collection of work-in-progress projects:</p>
-    <ul style="text-align: left;">
-      <li><a href="https://github.com/Eng-ADAL/MindAtlas"           target="_blank">MindAtlas: Experimental API project for MCP Servers</a></li><br> 
-      <li><a href="https://github.com/Eng-ADAL/Habitat_Picker"      target="_blank">Habitat_Picker: ETL Pipeline Project for Property and Livability </a></li><br> 
-      <li><a href="https://github.com/Eng-ADAL/OBC"                 target="_blank">OBC: A modular ETL pipeline project designed to handle data transformation securely and transparently, revealing what’s obscured by the cloud.</a></li><br>
-      <li><a href="https://github.com/Eng-ADAL/check_status"        target="_blank">Check Status: A Dockerised Python app that checks HTTP status and logs it PostgreSQL</a></li><br>
-      <li><a href="https://github.com/Eng-ADAL/Tracker"             target="_blank">Tracker: Easy Clipping App</a></li><br> 
-      <li><a href="https://github.com/Eng-ADAL/CoffeeShop_Manager"  target="_blank">CoffeeShop_Manager: Coffe Shop Management APP</a></li><br> 
-    </ul>
-  </section>
+        <h2>Articles</h2>
 
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>
-      <a href="https://github.com/eng-adal"         target="_blank">GitHub</a> | 
-      <a href="https://www.linkedin.com/in/engadal" target="_blank">LinkedIn</a> | 
-      <a href="https://medium.com/@Eng-ADAL"        target="_blank">Medium</a>
-    </p>
-  </section>
+        <p>
+            Notes, experiments, tutorials, and things I have learned
+            while building stuff.
+        </p>
+            <ul class="article-list">
 
-<!-- Decorative Footer Image -->
-<div class="footer-image-container">
-</div>
-  <footer>
-    <p> adal.page </p>
-    <p> © 2026 </p>
-  </footer>
+                <li class="article-list-item">
+                    <article>
+                        <header>
+                            <h3>
+                                <a href="/articles/tmux-resurrect/">
+                                    📌 Let’s resurrect your coding cockpit! tmux-resurrect to the rescue 📌
+                                </a>
+                            </h3>
+
+                            <p class="article-meta">
+                                <time datetime="2025-11-21">
+                                    21 November 2025
+                                </time>
+                                · 3 min read
+                            </p>
+                        </header>
+                    </article>
+                </li>
+
+                <li class="article-list-item">
+                    <article>
+                        <header>
+                            <h3>
+                                <a href="/articles/linux-setup/">
+                                    I Didn’t Build a Linux Setup. I Built the System Behind It
+                                </a>
+                            </h3>
+
+                            <p class="article-meta">
+                                <time datetime="2026-09-01">
+                                    1 September 2026
+                                </time>
+                                · 9 min read
+                            </p>
+                        </header>
+                    </article>
+                </li>
+
+                <li class="article-list-item">
+                    <article>
+                        <header>
+                            <h3>
+                                <a href="/articles/trash-bin/">
+                                    No one told you that you need that trash bin! But you need it!
+                                </a>
+                            </h3>
+
+                            <p class="article-meta">
+                                <time datetime="2026-03-31">
+                                    31 March 2026
+                                </time>
+                                · 6 min read
+                            </p>
+                        </header>
+                    </article>
+                </li>
+
+                <li class="article-list-item">
+                    <article>
+                        <header>
+                            <h3>
+                                <a href="/articles/auto-activate-venv/">
+                                    If it works on your Computer, auto activate your VENV.
+                                </a>
+                            </h3>
+
+                            <p class="article-meta">
+                                <time datetime="2026-01-26">
+                                    26 January 2026
+                                </time>
+                                · 4 min read
+                            </p>
+                        </header>
+                    </article>
+                </li>
+            </ul>
+
+        <p>
+            <a href="/articles/">
+                Explore the articles →
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+
+        <h2>Projects</h2>
+
+        <p>
+            A collection of engineering projects, experiments,
+            and things currently being built.
+        </p>
+
+        <ul class="project-list">
+
+            <li class="project-list-item">
+                <article>
+                    <header>
+                        <h3>
+                            <a
+                                href="https://github.com/<USER>/experimental_linux"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Eng-Workstation
+                            </a>
+                        </h3>
+                            <p class="project-description">
+                                A lightweight, keyboard-driven Linux station for humans and AI coding agents.
+                            </p>
+                    </header>
+               </article>
+            </li>
+
+            <li class="project-list-item">
+                <article>
+                    <header>
+                        <h3>
+                            <a
+                                href="https://github.com/<USER>/MindAtlas"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                MindAtlas
+                            </a>
+                        </h3>
+                            <p class="project-description">
+                                Experimental API project for MCP Servers
+                            </p>
+                    </header>
+               </article>
+            </li>
+
+            <li class="project-list-item">
+                <article>
+                    <header>
+                        <h3>
+                            <a
+                                href="https://github.com/<USER>/Habitat_Picker"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Habitat Picker
+                            </a>
+                        </h3>
+                            <p class="project-description">
+                                ETL pipeline project for property and livability data
+                            </p>
+                    </header>
+                </article>
+            </li>
+
+            <li class="project-list-item">
+                <article>
+                    <header>
+                        <h3>
+                            <a
+                                href="https://github.com/<USER>/OBC"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                OBC
+                            </a>
+                        </h3>
+              
+                        <p class="project-description">
+                            Modular ETL pipeline for secure and transparent data transformation
+                        </p>
+                    </header>
+                </article>
+            </li>
+
+            <li class="project-list-item">
+                <article>
+                    <header>
+                        <h3>
+                            <a
+                                href="https://github.com/<USER>/check_status"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Check Status
+                            </a>
+                        </h3>
+
+                        <p class="project-description">
+                            Dockerised Python application for HTTP status checks
+                        </p>
+                    </header>
+                </article>
+            </li>
+
+            <li class="project-list-item">
+                <article>
+                    <header>
+                        <h3>
+                            <a
+                                href="https://github.com/<USER>/Tracker"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Tracker
+                            </a>
+                        </h3>
+
+                        <p class="project-description">
+                            Easy clipping application
+                        </p>
+                    </header>
+                </article>
+            </li>
+
+            <li class="project-list-item">
+                <article>
+                    <header>
+                        <h3>
+                            <a
+                                href="https://github.com/<USER>/CoffeeShop_Manager"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                CoffeeShop Manager
+                            </a>
+                        </h3>
+
+                        <p class="project-description">
+                            Coffee shop management application
+                        </p>
+                    </header>
+                </article>
+            </li>
+
+        </ul>
+
+        <p>
+            <a href="https://github.com/<USER>" target="_blank">
+                Explore the projects →</a>         <!-- later redirect internal -->
+            </a>
+        </p>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+            <p>
+              <a href="https://github.com/<USER>"         target="_blank">GitHub</a> |
+              <a href="https://www.linkedin.com/in/<linkedin_url>" target="_blank">LinkedIn</a> |
+              <a href="https://medium.com/@<USER>"        target="_blank">Medium</a>
+            </p>
+    </section>
+
+</main>
+
+<!-- Decorative Footer -->
+<footer class="site-footer">
+
+    <div class="footer-image-container"></div>
+
+    <div class="footer-content">
+
+        <p class="footer-site-name">
+            <page_url>
+        </p>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="/">Home</a>
+            <a href="/articles/">Articles</a>
+            <a href="/#projects">Projects</a>
+        </nav>
+
+        <p class="footer-links">
+            <a
+                href="https://github.com/<USER>"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+            |
+            <a
+                href="https://www.linkedin.com/in/<linkedin_url>"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+            |
+            <a
+                href="https://medium.com/@<USER>"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Medium
+            </a>
+        </p>
+
+        <p class="footer-copyright">
+            © 2026 <ME>
+        </p>
+
+    </div>
+
+</footer>
+
 </body>
 </html>
