@@ -4,11 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Article Title | A.DAL</title>
+    <!-- Page-specific metadata -->
+    <title>Why Data Engineers Use WSL | A.DAL</title>
 
     <meta
         name="description"
         content="Short description of the article."
+    >
+
+    <meta
+        name="author"
+        content="A.DAL"
+    >
+
+    <link
+        rel="canonical"
+        href="https://adal.page/articles/<article-slug>/"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Article Title"
+    >
+
+    <meta
+        property="og:description"
+        content="Short description of the article."
+    >
+
+    <meta
+        property="og:type"
+        content="article"
+    >
+
+    <meta
+        property="og:url"
+        content="https://adal.page/articles/wsl-for-data-engineers/"
+    >
+
+    <meta
+        property="og:image"
+        content="https://adal.page/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-001.webp"
+    >
+
+    <meta
+        property="article:published_time"
+        content="2025-09-15"
+    >
+
+    <meta
+        property="article:author"
+        content="A.DAL"
+    >
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
     >
 
     <link rel="stylesheet" href="../../style.css">
@@ -20,7 +72,9 @@
         <nav>
             <a href="../../index.html">Home</a>
             <a href="../index.html">Articles</a>
+            <!--
             <a href="../../projects/index.html">Projects</a>
+            -->
         </nav>
     </header>
 
@@ -30,45 +84,353 @@
 
             <header class="article-header">
 
-                <p class="article-date">1 September 2026</p>
-
-                <h1>Article Title</h1>
-
-                <p class="article-description">
-                    A short summary or subtitle for the article.
+                <p class="article-date">
+                    <time datetime="2025-09-15">
+                        15 September 2025
+                    </time>
                 </p>
+
+                <h1>
+                    Why Data Engineers Use WSL and How to Set It Up in 5 Minutes
+                </h1>
 
             </header>
 
-            <figure class="article-hero">
+
+            <figure class="article-cover">
+
                 <img
-                    src="../../images/articles/article-slug/hero.png"
-                    alt="Description of the article image"
+                    src="/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-001.webp"
+                    alt="Ubuntu WSL terminal showing the neofetch command output"
                 >
+
             </figure>
+
 
             <div class="article-content">
 
                 <p>
-                    Article introduction goes here.
+                    Data engineering often requires tools that are built for Linux first, such as Docker, Python, PostgreSQL clients, or distributed processing frameworks. Setting these up directly on Windows can be frustrating. A full switch to Linux is not always practical - many organisations rely on Windows for Active Directory, Power BI, or Office integration - and virtual machines can be heavy and slow. WSL offers the best of both worlds: a native Linux shell inside Windows, with minimal overhead. You keep Windows-only apps and workflows, while still accessing Linux tooling and even browsing your Windows folders directly from WSL. In this guide, I’ll walk you through the steps I used to set up WSL, configure it for development, and highlight why each step matters for data engineering projects.
                 </p>
 
-                <h2>First Section</h2>
+
+                <h2>Step 1: Verify Windows build</h2>
 
                 <p>
-                    Article content goes here.
+                    Press Win + R, type <code>winver</code>, press Enter.
                 </p>
 
-                <h2>Second Section</h2>
+                <pre><code>winver</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-002.webp"
+                        alt="Windows Run dialog with winver entered"
+                    >
+
+                    <figcaption>
+                        Windows Run window
+                    </figcaption>
+
+                </figure>
 
                 <p>
-                    More content goes here.
+                    Note the version and OS build numbers.
                 </p>
 
-                <h2>Conclusion</h2>
+                <p>
+                    For reference:
+                </p>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-003.webp"
+                        alt="Windows About screen showing the Windows version and OS build"
+                    >
+
+                    <figcaption>
+                        About Windows window
+                    </figcaption>
+
+                </figure>
+
+                <ul>
+                    <li>
+                        <strong>Build 19041 or later</strong> → you can use the modern
+                        <code>wsl --install</code> command.
+                    </li>
+
+                    <li>
+                        <strong>Older than 19041</strong> → you must do the manual feature enablement.
+                    </li>
+                </ul>
+
+
+                <h2>Step 2: Check WSL status</h2>
 
                 <p>
-                    Final thoughts go here.
+                    Open PowerShell as Administrator.
+                </p>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-004.png"
+                        alt="Start menu showing PowerShell being run as Administrator"
+                    >
+
+                    <figcaption>
+                        Starting PowerShell as Administrator
+                    </figcaption>
+
+                </figure>
+
+                <p>
+                    Then run:
+                </p>
+
+                <pre><code>wsl --status</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-005.webp"
+                        alt="PowerShell showing the WSL Ubuntu installation command"
+                    >
+                </figure>
+                
+                <p>
+                    If you see something like this, it is nice - your Windows environment is new enough to support WSL2 directly. That makes life much easier.
+                </p>
+
+                <p>
+                    If it errors with “Unrecognized option” or something similar, that means your build doesn’t support the new unified command - we’ll need to go manual.
+                </p>
+
+
+                <h2>Step 3: Install WSL and Ubuntu</h2>
+
+                <p>
+                    In the same <strong>Admin PowerShell</strong> terminal, run:
+                </p>
+
+                <pre><code>wsl --install -d Ubuntu</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-006.webp"
+                        alt="PowerShell showing the WSL Ubuntu installation command"
+                    >
+                </figure>
+
+                <p>
+                    This does three things in one go:
+                </p>
+
+                <ul>
+                    <li>Installs the WSL engine.</li>
+                    <li>Sets the default version to WSL2.</li>
+                    <li>Downloads Ubuntu from the Microsoft Store.</li>
+                </ul>
+
+                <p>
+                    After the install finishes, you’ll likely need to
+                    <strong>restart Windows</strong>.
+                </p>
+
+
+                <h2>Step 4: First launch and create your Linux user</h2>
+
+                <p>
+                    After reboot:
+                </p>
+
+                <ol>
+
+                    <li>
+                        <p>
+                            In Start Menu, search for <strong>Ubuntu</strong> and open it.
+                        </p>
+
+                        <figure class="article-image">
+
+                            <img
+                                src="/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-007.webp"
+                                alt="Ubuntu starting for the first time in WSL"
+                            >
+
+                        </figure>
+                    </li>
+
+
+                    <li>
+                        <p>
+                            It will run some setup, then ask for a
+                            <strong>new UNIX username</strong> and password.
+                        </p>
+
+                        <figure class="article-image">
+
+                            <img
+                                src="/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-008.webp"
+                                alt="Ubuntu WSL asking for a new UNIX username"
+                            >
+
+                        </figure>
+
+                        <p>
+                            🔒 You’ll be asked for your password here - just type it
+                            (nothing will show) and press Enter.
+                        </p>
+
+                        <ul>
+                            <li>
+                                “Installing, this may take a few minutes…” stage.
+                            </li>
+
+                            <li>
+                                This user is your WSL <strong>Linux account</strong> -
+                                it doesn’t have to match your Windows username.
+                            </li>
+                        </ul>
+                    </li>
+
+                </ol>
+
+                <p>
+                    Once you’re in and see the Ubuntu prompt like:
+                </p>
+
+                <pre><code>yourname@DESKTOP-XXXX:~$</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-009.webp"
+                        alt="Ubuntu WSL terminal showing the Linux shell prompt"
+                    >
+
+                </figure>
+
+                <p>
+                    …you’re inside Linux! 🎉 Nice - you’ve got your Linux shell alive
+                    and humming inside Windows. That’s a big milestone. 🚀
+                </p>
+
+
+                <h2>Step 5: Update and upgrade packages in WSL</h2>
+
+                <p>
+                    In your Ubuntu shell (inside WSL), run these commands:
+                </p>
+
+                <ul>
+
+                    <li>
+                        fetch the latest package lists
+                    </li>
+
+                </ul>
+
+                <pre><code>sudo apt update</code></pre>
+
+                <ul>
+
+                    <li>
+                        upgrade all installed packages
+                    </li>
+
+                </ul>
+
+                <pre><code>sudo apt upgrade -y</code></pre>
+
+                <ul>
+
+                    <li>
+                        optional: remove outdated cached packages
+                    </li>
+
+                </ul>
+
+                <pre><code>sudo apt autoremove -y</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/wsl-for-data-engineers/img-wsl-for-data-engineers-010.webp"
+                        alt="Ubuntu terminal showing apt package updates running"
+                    >
+
+                </figure>
+
+                <p>
+                    You’ll need to enter your password during installation.
+                </p>
+
+
+                <h2>And That’s It 🚀 (TL;DR)</h2>
+
+                <p>
+                    Quick recap if you just want the steps fast:
+                </p>
+
+                <ol>
+
+                    <li>
+                        <strong>Verify Windows build</strong> → check with <code>winver</code>
+                    </li>
+
+                    <li>
+                        <strong>Check WSL status</strong> → run
+                        <code>wsl --status</code> in Admin PowerShell
+                    </li>
+
+                    <li>
+                        <strong>Install WSL &amp; Ubuntu</strong> →
+                        <code>wsl --install -d Ubuntu</code>
+                    </li>
+
+                    <li>
+                        <strong>Launch Ubuntu &amp; create user</strong> →
+                        set up your Linux account
+                    </li>
+
+                    <li>
+                        <strong>Update packages</strong> →
+                        <code>sudo apt update &amp;&amp; sudo apt upgrade -y</code>
+                    </li>
+
+                </ol>
+
+
+                <p>
+                    Now you’re ready to run Python, Docker, and PostgreSQL like a
+                    Data Engineer - all inside Windows. 🎉
+                </p>
+
+
+                <p>
+                    With WSL up and running, you’ve laid the foundation for data
+                    engineering work: Python, Docker, PostgreSQL, and other
+                    Linux-first tools will feel right at home here. The best part
+                    is that you can use them alongside Windows-only apps like
+                    Power BI without friction.
+                </p>
+
+                <p>
+                    This setup is just the beginning. In the next article, we’ll
+                    dive into some essential Linux commands so you can move
+                    confidently around the shell and make the most of the
+                    environment you’ve just installed. From there, we’ll level up
+                    with Oh My Zsh, Vim, and Git to turn this terminal into a truly
+                    powerful and enjoyable workspace.
+                </p>
+
+                <p>
+                    See you soon!
                 </p>
 
             </div>
@@ -76,14 +438,16 @@
             <footer class="article-footer">
 
                 <p>
-                    Published: 1 September 2026
+                    <a href="/articles/">
+                        ← Back to articles
+                    </a>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    |
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="/articles/linux-101/">
+                        Next: Linux 101 for Noobs (Like Me) →
+                    </a>
                 </p>
-
-                <p>
-                    <a href="../index.html">← Back to articles</a>
-                </p>
-
-            </footer>
 
         </article>
 
@@ -91,4 +455,3 @@
 
 </body>
 </html>
-
