@@ -2,27 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Article Title | A.DAL</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Linux 101 for Noobs (Like Me): Getting Comfortable with the Basics | A.DAL</title>
 
     <meta
         name="description"
-        content="Short description of the article."
+        content="A beginner-friendly walkthrough of essential Linux terminal commands for navigating directories, creating and managing files, and getting comfortable with the command line."
     >
 
-    <link rel="stylesheet" href="../../style.css">
+    <meta
+        name="author"
+        content="A.DAL"
+    >
+
+    <link
+        rel="canonical"
+        href="https://jdoe.page/articles/linux-101/"
+    >
+
+    <meta
+        property="og:title"
+        content="Linux 101 for Noobs (Like Me): Getting Comfortable with the Basics"
+    >
+
+    <meta
+        property="og:description"
+        content="A beginner-friendly walkthrough of essential Linux terminal commands for navigating directories, creating and managing files, and getting comfortable with the command line."
+    >
+
+    <meta
+        property="og:type"
+        content="article"
+    >
+
+    <meta
+        property="og:url"
+        content="https://jdoe.page/articles/linux-101/"
+    >
+
+    <meta
+        property="og:image"
+        content="https://jdoe.page/images/articles/linux-101/linux-101-001.webp"
+    >
+
+    <meta
+        property="article:published_time"
+        content="2025-09-18"
+    >
+
+    <meta
+        property="article:author"
+        content="A.DAL"
+    >
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/images/home/logo.png"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="/images/home/logo.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../index.html">Articles</a>
-            <a href="../../projects/index.html">Projects</a>
+    <header class="site-header">
+
+        <nav
+            class="site-nav"
+            aria-label="Main navigation"
+        >
+            <a href="/">Home</a>
+            <a href="/articles/">Articles</a>
+            <a href="/#projects">Projects</a>
+            <a href="/#contact">Contact</a>
         </nav>
+
+        <div class="header-image-container"></div>
+
     </header>
+
 
     <main>
 
@@ -30,64 +109,587 @@
 
             <header class="article-header">
 
-                <p class="article-date">1 September 2026</p>
-
-                <h1>Article Title</h1>
-
-                <p class="article-description">
-                    A short summary or subtitle for the article.
+                <p class="article-date">
+                    <time datetime="2025-09-18">
+                        18 September 2025
+                    </time>
                 </p>
+
+                <h1>
+                    Linux 101 for Noobs (Like Me): Getting Comfortable with the Basics
+                </h1>
 
             </header>
 
-            <figure class="article-hero">
+
+            <figure class="article-cover">
+
                 <img
-                    src="../../images/articles/article-slug/hero.png"
-                    alt="Description of the article image"
+                    src="/images/articles/linux-101/linux-101-001.webp"
+                    alt="Linux terminal setup for a beginner command-line walkthrough"
                 >
+
             </figure>
+
 
             <div class="article-content">
 
+                <aside class="article-note">
+
+                    <h2>TL;DR</h2>
+
+                    <ul>
+                        <li>Linux directories = folders.</li>
+                        <li><code>mkdir</code> to create, <code>cd</code> to move, <code>..</code> to go back.</li>
+                        <li><code>ls</code> to see contents, <code>cat</code> to view files.</li>
+                        <li><code>cp</code>, <code>mv</code>, <code>rm</code> to manage files.</li>
+                        <li><code>rm -r</code> = flamethrower for directories, use carefully.</li>
+                        <li><code>clear</code> to tidy the terminal.</li>
+                        <li>Next up: Oh My Zsh for a smarter, friendlier shell.</li>
+                    </ul>
+
+                </aside>
+
+
                 <p>
-                    Article introduction goes here.
+                    When you first open the terminal, it can feel like staring into a void. No buttons, no menus, just a blinking cursor waiting for you to type something clever. But here’s the secret: you don’t need to know hundreds of commands to get started. Just a small handful will help you move around, manage files, and peek inside them. Once you learn these, the terminal starts feeling less like a dark cave and more like your personal command centre.
                 </p>
 
-                <h2>First Section</h2>
-
                 <p>
-                    Article content goes here.
+                    And I promise you this: once you get used to it, you’ll be hooked. Before long, you’ll be zipping around the terminal with your eyes closed!
                 </p>
 
-                <h2>Second Section</h2>
-
                 <p>
-                    More content goes here.
+                    Let’s go through the essentials.
                 </p>
 
-                <h2>Conclusion</h2>
+
+                <h2>
+                    Navigation: Moving Around the System
+                </h2>
 
                 <p>
-                    Final thoughts go here.
+                    Think of your computer as a giant filing cabinet. You’re just moving from one drawer (directory) to another.
                 </p>
+
+                <p>
+                    <strong><code>pwd</code> - print working directory:</strong> shows where you are right now.
+                </p>
+
+                <pre><code>pwd</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-002.webp"
+                        alt="Linux terminal showing the pwd command and current working directory"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <aside class="article-note">
+
+                    <p>
+                        “On Linux, a directory is the same thing as a folder on Windows or macOS. The word is just different.”
+                    </p>
+
+                </aside>
+
+
+                <h2>
+                    Make Directory!
+                </h2>
+
+                <p>
+                    We need a directory to put our projects in it! So let’s make a directory!
+                </p>
+
+                <pre><code>mkdir projects</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-003.webp"
+                        alt="Linux terminal showing the mkdir projects command"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    Yes, it is time to check that the directory exists! For this we will use List! (see what’s inside the current directory)
+                </p>
+
+                <p>
+                    List! <code>ls</code>
+                </p>
+
+                <pre><code>ls</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-004.webp"
+                        alt="Linux terminal showing the ls command and the new projects directory"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+
+                <h2>
+                    Change Directory!
+                </h2>
+
+                <p>
+                    <strong><code>cd</code> - change directory:</strong> lets you move to a different folder.
+                </p>
+
+                <pre><code>cd projects</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-005.webp"
+                        alt="Linux terminal showing cd projects and entering the projects directory"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    We are slowly slowly coming!
+                </p>
+
+
+                <h2>
+                    Create first file via Vim!
+                </h2>
+
+                <p>
+                    Creating our first file via Vim!
+                </p>
+
+                <pre><code>vim hello.py</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-006.webp"
+                        alt="Vim opening hello.py in the Linux terminal"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    Here is our first file!
+                </p>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-007.webp"
+                        alt="New hello.py file open in Vim"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    Let’s fill it!
+                </p>
+
+                <p>
+                    Press <kbd>i</kbd> to switch into insert mode.
+                </p>
+
+                <p>
+                    Type this line:
+                </p>
+
+                <pre><code>print("Hello from Vim!")</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-008.webp"
+                        alt="Hello from Vim Python code entered in the editor"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    Press <kbd>Esc</kbd> to leave insert mode.
+                </p>
+
+                <p>
+                    Type <code>:wq</code> and press Enter (write and quit).
+                </p>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-009.webp"
+                        alt="Saving and quitting Vim with the :wq command"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+
+                <h2>
+                    Looking Inside Your File: <code>cat</code>
+                </h2>
+
+                <p>
+                    Let’s check that our file really exists and has content. Use the <code>cat</code> command (short for concatenate) to print the whole file to the terminal:
+                </p>
+
+                <pre><code>cat hello.py</code></pre>
+
+                <p>
+                    You should see:
+                </p>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-010.webp"
+                        alt="Terminal showing the contents of hello.py with the cat command"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    Yes you did it! 🎊 You created your first file via Vim!
+                </p>
+
+
+                <h2>
+                    Let’s Backup Our New File!
+                </h2>
+
+                <p>
+                    <strong>Copy (<code>cp</code>):</strong> make a duplicate of a file.
+                </p>
+
+                <pre><code>cp hello.py hello_backup.py</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-011.webp"
+                        alt="Linux terminal showing the cp command creating a backup file"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    Try <code>ls</code> to check your backup exists!
+                </p>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-012.webp"
+                        alt="Linux terminal listing hello.py and hello_backup.py"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    Yup! It’s there!
+                </p>
+
+
+                <h2>
+                    Deleting Files! <code>rm</code>
+                </h2>
+
+                <p>
+                    Sometimes you don’t need a file anymore. The command for removing it is <code>rm</code> (short for remove):
+                </p>
+
+                <pre><code>rm hello_backup.py</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-013.webp"
+                        alt="Linux terminal showing the rm command deleting the backup file"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    That deletes the file permanently. No recycle bin, no “Are you sure?” pop-up. Once it’s gone, it’s gone.
+                </p>
+
+                <p>
+                    Try running <code>ls</code> afterwards to see that <code>hello_backup.py</code> has disappeared.
+                </p>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-014.webp"
+                        alt="Linux terminal confirming the backup file has disappeared"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <aside class="article-note">
+
+                    <p>
+                        Pro tip: start by removing copies or files you don’t care about, so you don’t accidentally delete your hard work.
+                    </p>
+
+                </aside>
+
+
+                <h2>
+                    Going Back Up - Parent Directory!
+                </h2>
+
+                <p>
+                    Right now you’re inside your projects directory. To step one level back (up to your home folder), use:
+                </p>
+
+                <pre><code>cd ..</code></pre>
+
+                <p>
+                    The two dots mean “the parent directory.”
+                </p>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-015.webp"
+                        alt="Linux terminal showing cd .. moving to the parent directory"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+
+                <h2>
+                    Removing a Directory: <code>rmdir</code>
+                </h2>
+
+                <p>
+                    If you try to remove projects while it still has files, Linux will complain:
+                </p>
+
+                <pre><code>rmdir projects
+rmdir: failed to remove 'projects': Directory not empty</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-016.webp"
+                        alt="Linux terminal showing rmdir failing because the directory is not empty"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    That’s because <code>rmdir</code> only works on empty folders. To delete a folder and everything inside it, you need:
+                </p>
+
+                <pre><code>rm -r projects</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-017.webp"
+                        alt="Linux terminal showing rm -r deleting the projects directory"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    The <code>-r</code> means recursive, which is just a fancy way of saying “go inside, wipe out everything, then remove the folder too.”
+                </p>
+
+                <blockquote>
+
+                    <p>
+                        This is the flamethrower of Linux commands: powerful, fast, and absolutely no undo button. Use it carefully, or you’ll burn down the wrong directory! 🔥🔥
+                    </p>
+
+                </blockquote>
+
+                <p>
+                    Noob to noob advice: always double check with <code>ls</code>!
+                </p>
+
+
+                <h2>
+                    Clearing the Terminal
+                </h2>
+
+                <p>
+                    After all that experimentation, creating files, copying, deleting, surviving Vim, your terminal might look a little messy. To clear everything from view without touching your files, just type:
+                </p>
+
+                <pre><code>clear</code></pre>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-018.webp"
+                        alt="Linux terminal after running the clear command"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    And voilà! A clean slate. The commands you ran are still in history, but your terminal looks nice and tidy, ready for the next adventure.
+                </p>
+
+                <figure class="article-image">
+
+                    <img
+                        src="/images/articles/linux-101/linux-101-019.webp"
+                        alt="Clean Linux terminal ready for the next command-line adventure"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </figure>
+
+                <p>
+                    It’s like wiping your whiteboard before starting a new lesson. Your workspace feels fresh, and you can focus without distractions.
+                </p>
+
+
+                <h2>
+                    Wrapping Up
+                </h2>
+
+                <p>
+                    Congratulations! You’ve navigated directories, created and peeked inside files, copied and deleted them, and even wielded the flamethrower with <code>rm -r</code>. You’ve cleared the chaos with <code>clear</code> and survived Vim without panic.
+                </p>
+
+                <p>
+                    Now your terminal is clean, and your confidence is growing. But the fun doesn’t stop here. Next, we’ll make your shell smarter, faster, and way more enjoyable with Oh My Zsh. Get ready to customise your prompt, explore handy plugins, and level up your Linux experience!
+                </p>
+
+
+                <h2>
+                    Linux 101 Cheat Sheet
+                </h2>
+
+                <pre><code>pwd                     # show current directory
+mkdir projects          # make a new folder
+cd projects             # move into a folder
+cd ..                   # move back up
+ls                      # list files
+vim hello.py            # create/edit file
+cat hello.py            # view file content
+cp hello.py backup.py   # copy file
+mv backup.py archive.py # move/rename file
+rm archive.py           # delete file
+rm -r projects          # delete folder recursively (&#9888; flamethrower! &#128293;)
+clear                   # clear the terminal</code></pre>
 
             </div>
-
             <footer class="article-footer">
 
                 <p>
-                    Published: 1 September 2026
+                    <a href="/articles/">
+                        ← Back to articles
+                    </a>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    |
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="/articles/linux-on-vscode/">
+                        Next: Level Up Your Terminal: Oh-My-Zsh!
+                    </a>
                 </p>
-
-                <p>
-                    <a href="../index.html">← Back to articles</a>
-                </p>
-
-            </footer>
 
         </article>
 
     </main>
+
+<footer class="site-footer">
+
+    <div class="footer-image-container"></div>
+
+    <div class="footer-content">
+
+        <p class="footer-site-name">
+            <page_url>
+        </p>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="/">Home</a>
+            <a href="/articles/">Articles</a>
+            <a href="/#projects">Projects</a>
+        </nav>
+
+        <p class="footer-links">
+            <a
+                href="https://github.com/<USER>"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+            |
+            <a
+                href="https://www.linkedin.com/in/<linkedin_url>"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+            |
+            <a
+                href="https://medium.com/@<USER>"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Medium
+            </a>
+        </p>
+
+        <p class="footer-copyright">
+            © 2026 <ME>
+        </p>
+
+    </div>
+
+</footer>
+
 
 </body>
 </html>
